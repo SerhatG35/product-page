@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Navbar, ProductSection, BurgerMenu } from './utils/index';
 
 function App() {
+  const [burgerMenuState, setBurgerMenuState] = useState('hidden'); // burger menu için görüntü statesi
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='w-full h-full font-customFont bg-main text-customBlackFontColor'>
+      <Navbar
+        burgerMenuState={burgerMenuState}
+        setBurgerMenuState={setBurgerMenuState}
+      />
+      <BurgerMenu burgerMenuState={burgerMenuState} />
+      <ProductSection />
     </div>
   );
 }
