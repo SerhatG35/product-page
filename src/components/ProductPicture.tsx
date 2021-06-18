@@ -35,7 +35,10 @@ const ProductPicture = () => {
   }, [currentPicture, pictures]);
 
   return (
-    <div className='w-full sm:w-2/3 b h-full flex justify-center items-center flex-col lg:flex-row bg-pictureBg border-2'>
+    <section
+      aria-label='product pictures'
+      className='w-full sm:w-2/3 b h-full flex justify-center items-center flex-col lg:flex-row bg-pictureBg border-2'
+    >
       <div className='flex justify-around items-center'>
         <button
           disabled={currentPictureIndex === 0 ? true : false}
@@ -48,7 +51,7 @@ const ProductPicture = () => {
         <img
           className='w-10/12 sm:w-8/12 lg:w-3/4'
           src={currentPicture}
-          alt='current-selected-img'
+          alt='current selected img'
         />
 
         <button
@@ -67,12 +70,12 @@ const ProductPicture = () => {
               className='cursor-pointer'
               onClick={() => changePicture(picture)}
             >
-              <img src={picture} alt='' />
+              <img src={picture} alt='list of product images' />
             </div>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

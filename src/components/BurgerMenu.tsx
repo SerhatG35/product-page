@@ -13,7 +13,8 @@ const BurgerMenu = ({ burgerMenuState }: BurgerMenuTypes) => {
     'Koleksiyonlar',
   ]);
   return (
-    <div
+    <nav
+      aria-label='burger navbar'
       className={`${burgerMenuState} sm:hidden bg-customBlackBgColor flex flex-col text-center items-center justify-center text-customWhiteFontColor text-xl`}
     >
       {navbarPaths.map((paths) => (
@@ -21,7 +22,7 @@ const BurgerMenu = ({ burgerMenuState }: BurgerMenuTypes) => {
           <a href='/#'>{paths}</a>
         </div>
       ))}
-    </div>
+    </nav>
   );
 };
 
