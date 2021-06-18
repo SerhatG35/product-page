@@ -49,11 +49,16 @@ const ProductDetails = () => {
             {`${productPrice} TL`}
           </p>
           <p
+            role='contentinfo'
             aria-label='discounted price of the product'
             className='text-xl lg:text-lg customBreakPoint2:text-2xl font-semibold sm:ml-5'
           >{`${discountedPrice} TL`}</p>
         </div>
-        <p className='rounded-sm border border-customBlackFontColor p-1 flex justify-center items-center whitespace-nowrap ml-5 sm:ml-0 text-lg customBreakPoint2:text-xl'>
+        <p
+          role='contentinfo'
+          aria-label='discount rate'
+          className='rounded-sm border border-customBlackFontColor p-1 flex justify-center items-center whitespace-nowrap ml-5 sm:ml-0 text-lg customBreakPoint2:text-xl'
+        >
           {`${discountRate}% indirim`}
         </p>
       </div>
